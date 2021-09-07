@@ -1,6 +1,8 @@
 ---
 
-version: "2.1"
+# NOT READY! DO NOT USE!
+
+version: "3.8"
 services:
   tautulli:
     image: ghcr.io/linuxserver/tautulli
@@ -8,7 +10,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Lisbon
     volumes:
       - <path to data>:/config
     ports:
