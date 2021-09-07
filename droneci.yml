@@ -1,0 +1,60 @@
+---
+
+version: "3.8"
+services:
+  drone:
+    image: drone/drone:latest
+    container_name: drone
+    user: "0:0"
+    network_mode: bridge
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - drone:/data
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Lisbon
+      - DRONE_GITLAB_SERVER=https://gitlab.jassuncao.work
+      - DRONE_GITLAB_CLIENT_ID=a2d5835c5591521dc5e1c0ac36544bbff25f733e27ea47791ff4b5c544e01923
+      - DRONE_GITLAB_CLIENT_SECRET=9f0483b931d50c6861abc84c2585497870be60498182d03917c23696f8514326
+      - DRONE_RPC_SECRET=b8721f0da8f1b2c210569a8d0f31013a
+      - DRONE_SERVER_HOST=drone.jassuncao.work
+      - DRONE_SERVER_PROTO=https
+      - DRONE_GIT_ALWAYS_AUTH=false
+      - DRONE_TLS_AUTOCERT=false
+      - DRONE_RUNNER_CAPACITY=5
+      - DRONE_USER_CREATE=username:jassuncao,admin:true
+      - DRONE_LOGS_TRACE=true
+      - DRONE_AGENTS_ENABLED=true
+    ports:
+      - 22280:80
+      - 22443:443
+
+  drone_runner:
+    image: drone/drone-runner-docker:latest
+    container_name: drone_runner
+    network_mode: bridge
+    privileged: true
+    user: "0:0"
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_RPC_HOST=drone.jassuncao.work
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_SECRET=b8721f0da8f1b2c210569a8d0f31013a
+      - DRONE_RUNNER_CAPACITY=5
+      - DRONE_UI_DISABLE=false
+    ports:
+      - 3000:3000
+    depends_on:
+      - drone
+
+volumes:
+  drone:
+
+# https://readme.drone.io/server/provider/gitlab/
+# https://github.com/cenk1cenk2/drone-semantic-release#custom-release-file
+# https://github.com/semantic-release/github
+# https://github.com/semantic-release/github/blob/master/package.json
+# https://semantic-release.gitbook.io/semantic-release/usage/configuration
