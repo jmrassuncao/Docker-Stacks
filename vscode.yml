@@ -1,0 +1,21 @@
+---
+
+version: "3.8"
+services:
+  vscode:
+    image: ghcr.io/linuxserver/code-server:latest
+    container_name: vscode
+    hostname: vscode
+    network_mode: bridge
+    environment:
+      - PUID=1000
+      - PGID=1004
+      - TZ=Europe/Lisbon
+      - SUDO_PASSWORD=
+      - PROXY_DOMAIN=vsc.jassuncao.work
+      - DOCKER_MODS=linuxserver/mods:code-server-npmglobal|linuxserver/mods:code-server-shellcheck|linuxserver/mods:code-server-docker
+    volumes:
+      - /home/jassuncao/docker/vscode:/config
+    ports:
+      - 33443:8443
+    restart: unless-stopped
