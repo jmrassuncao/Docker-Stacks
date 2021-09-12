@@ -25,24 +25,24 @@ steps:
         from_secret: user_email_jass
       gitlab_token:
         from_secret: jass_token
-  - name: gitlab-release
-    image: appleboy/drone-gitlab-ci
-    settings:
-      host: https://gitlab.jassuncao.work
-      token:
-        from_secret: jass_token
-      id: 19
-      ref: master
-      debug: true
+#  - name: gitlab-release
+#    image: appleboy/drone-gitlab-ci
+#    settings:
+#      host: https://gitlab.jassuncao.work
+#      token:
+#        from_secret: jass_token
+#      id: 19
+#      ref: master
+#      debug: true
 
----
-kind: pipeline
-name: testing release
-
-steps:
-- name: release
-  image: solutisdigital/drone-gitlab-releases
-  settings:
-    assets: asset.zip
-    token:
-      from_secret: jass_token
+#---
+#kind: pipeline
+#name: testing release
+#
+#steps:
+#- name: release
+#  image: solutisdigital/drone-gitlab-releases
+#  settings:
+#    assets: asset.zip
+#    token:
+#      from_secret: jass_token
