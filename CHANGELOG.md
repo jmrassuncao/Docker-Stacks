@@ -1,3 +1,10 @@
+## [1.0.7](http://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.6...v1.0.7) (2021-09-12)
+
+
+### Bug Fixes
+
+* teste 2 ([d6a29e5](http://gitlab.jassuncao.work/jassuncao/docker-stacks/commit/d6a29e558bdb3f59abd3cb4718adae0fb9b47422))
+
 ## [1.0.6](http://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.5...v1.0.6) (2021-09-12)
 
 
