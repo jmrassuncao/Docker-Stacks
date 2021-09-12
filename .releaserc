@@ -14,11 +14,11 @@ plugins:
         {"path": "dist/asset.min.js", "label": "JS distribution"}
       ]
     }
-  - "@semantic-release/git"
+#  - "@semantic-release/git"
   - "@semantic-release/gitlab"
 
 verifyConditions:
-  - '@semantic-release/git'
+#  - '@semantic-release/git'
   - "@semantic-release/gitlab"
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
