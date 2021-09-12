@@ -1,5 +1,5 @@
 # semantic-release >> https://github.com/cenk1cenk2/drone-semantic-release
-#   gitlab-release >> http://plugins.drone.io/appleboy/drone-gitlab-ci/
+# gitlab-release >> http://plugins.drone.io/appleboy/drone-gitlab-ci/
 #
 
 
@@ -14,9 +14,9 @@ trigger:
 steps:
   - name: semantic-release
     image: cenk1cenk2/drone-semantic-release
-    add_modules: "@semantic-release/gitlab"
     settings:
       mode: "release"
+      add_modules: "@semantic-release/gitlab"
       update_readme_toc: false
       use_local_rc: true
       semantic_release: true
