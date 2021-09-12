@@ -11,7 +11,10 @@
       "@semantic-release/changelog",
       "@semantic-release/git"
     ],
-    "branch": "master"
+    "branches": [
+      "master",
+      "next"
+    ]
   },
   "repository": {
     "type": "git",
