@@ -6,6 +6,13 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/changelog"
+  - "@semantic-release/gitlab", {
+      "gitlabUrl": "https://gitlab.jassuncao.work",
+      "assets": [
+        {"path": "dist/asset.min.css", "label": "CSS distribution"},
+        {"path": "dist/asset.min.js", "label": "JS distribution"}
+      ]
+    }
   - "@semantic-release/git"
   - "@semantic-release/github"
 
