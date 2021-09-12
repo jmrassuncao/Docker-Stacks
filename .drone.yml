@@ -16,7 +16,7 @@ steps:
     image: cenk1cenk2/drone-semantic-release
     settings:
       mode: "release"
-      add_modules: "@semantic-release/gitlab"
+#      add_modules: "@semantic-release/gitlab"
       update_readme_toc: false
       use_local_rc: true
       semantic_release: true
