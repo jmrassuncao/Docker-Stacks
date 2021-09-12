@@ -14,6 +14,7 @@ trigger:
 steps:
   - name: semantic-release
     image: cenk1cenk2/drone-semantic-release
+    add_modules: "@semantic-release/gitlab"
     settings:
       mode: "release"
       update_readme_toc: false
