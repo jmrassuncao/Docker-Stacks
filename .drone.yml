@@ -2,7 +2,7 @@
 
 kind: pipeline
 type: docker
-name: ibus-ts
+name: semantic-release
 
 steps:
   - name: build
