@@ -1,6 +1,6 @@
 {
   "name": "gitlab_tag_and_release",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "index.js",
   "license": "MIT",
   "release": {
@@ -50,5 +50,8 @@
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
