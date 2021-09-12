@@ -7,6 +7,8 @@ name: semantic-release
 steps:
   - name: build
     image: node:12.14.0-buster
+    settings:
+      add_modules: "@semantic-release/gitlab"
     environment:
       GIT_AUTHOR_NAME:
         from_secret: user_name_jass
