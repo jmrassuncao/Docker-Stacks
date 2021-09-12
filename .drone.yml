@@ -25,6 +25,9 @@ steps:
         from_secret: user_email_jass
       gitlab_token:
         from_secret: jass_token
+  commands:
+    - semantic-release --branches master -ci
+
 #  - name: gitlab-release
 #    image: appleboy/drone-gitlab-ci
 #    settings:
