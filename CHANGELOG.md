@@ -1,3 +1,10 @@
+## [1.0.21](https://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.20...v1.0.21) (2021-09-12)
+
+
+### Bug Fixes
+
+* .releaserc.json ([d7e36fc](https://gitlab.jassuncao.work/jassuncao/docker-stacks/commit/d7e36fcb3b4b0b974ab8df57203cf420da3b5381))
+
 ## [1.0.20](https://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.19...v1.0.20) (2021-09-12)
 
 
