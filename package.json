@@ -49,7 +49,5 @@
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   },
-  {
   "extends": "@semantic-release/gitlab-config"
-  }
 }
