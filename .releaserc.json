@@ -13,6 +13,6 @@
       }
     ]
   ],
-  "repositoryUrl": "http://gitlab.jassuncao.work/jassuncao/docker-stacks.git",
+  "repositoryUrl": "https://gitlab.jassuncao.work/jassuncao/docker-stacks.git",
   "tagFormat": "${version}"
 }
