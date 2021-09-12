@@ -12,5 +12,7 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
-  ]
+  ],
+  "repositoryUrl": "http://gitlab.jassuncao.work/jassuncao/docker-stacks.git",
+  "tagFormat": "${version}"
 }
