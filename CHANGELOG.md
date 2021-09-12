@@ -1,3 +1,10 @@
+## [1.0.11](http://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.10...v1.0.11) (2021-09-12)
+
+
+### Bug Fixes
+
+* Update .drone.yml ([b9cb322](http://gitlab.jassuncao.work/jassuncao/docker-stacks/commit/b9cb3220617e96b53d77865f99c59eedb9d12ff6))
+
 ## [1.0.10](http://gitlab.jassuncao.work/jassuncao/docker-stacks/compare/v1.0.9...v1.0.10) (2021-09-12)
 
 
