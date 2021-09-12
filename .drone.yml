@@ -16,9 +16,8 @@ steps:
     image: cenk1cenk2/drone-semantic-release
     settings:
       mode: "release"
-#      add_modules: "@semantic-release/gitlab"
       update_readme_toc: false
-      use_local_rc: true
+      use_local_rc: false
       semantic_release: true
       git_method: gl
       git_user_name:
@@ -27,7 +26,7 @@ steps:
         from_secret: user_email_jass
       gitlab_token:
         from_secret: jass_token
-    commands:
+    scripts:
       - semantic-release --branches master -ci
 
 #  - name: gitlab-release
