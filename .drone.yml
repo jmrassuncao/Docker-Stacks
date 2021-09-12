@@ -2,6 +2,7 @@
 #   gitlab-release >> http://plugins.drone.io/appleboy/drone-gitlab-ci/
 #
 
+
 kind: pipeline
 name: semver
 trigger:
