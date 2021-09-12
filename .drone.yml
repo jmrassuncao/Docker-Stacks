@@ -20,7 +20,8 @@ steps:
         from_secret: jass_token
 
     commands:
-      - npm i --silent
+#      - npm i --silent
+      - npm i
       - npx semantic-release
     when:
       branch:
