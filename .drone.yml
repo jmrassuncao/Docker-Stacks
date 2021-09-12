@@ -22,7 +22,7 @@ steps:
         from_secret: jass_token
 
     commands:
-      - npm install --no-optional
+      - npm i fsevents@latest -f --save-optional
 #      - npm i --silent
       - npm i
       - npx semantic-release
