@@ -15,11 +15,11 @@ plugins:
       ]
     }
   - "@semantic-release/git"
-  - "@semantic-release/github"
+  - "@semantic-release/gitlab"
 
 verifyConditions:
   - '@semantic-release/git'
-  - "@semantic-release/github"
+  - "@semantic-release/gitlab"
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
     releaseRules:
@@ -67,14 +67,14 @@ generateNotes:
     - hidden: true
     presetConfig: true
 prepare:
-  - path: "@semantic-release/git"
+  - path: "@semantic-release/gitlab"
   - path: "@semantic-release/changelog"
     changelogFile: "docs/CHANGELOG.md"
 publish:
-  - path: "@semantic-release/github"
+  - path: "@semantic-release/gitlab"
 
 success:
-  - "@semantic-release/github"
+  - "@semantic-release/gitlab"
 
 fail:
-  - "@semantic-release/github"
+  - "@semantic-release/gitlab"
