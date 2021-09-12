@@ -1,12 +1,18 @@
 {
   "name": "gitlab_tag_and_release",
-  "version": "0.0.8",
+  "version": "1.0.9",
   "main": "index.js",
   "license": "MIT",
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator", [ "@semantic-release/npm", { "npmPublish": false } ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
       "@semantic-release/changelog",
       "@semantic-release/git"
     ],
