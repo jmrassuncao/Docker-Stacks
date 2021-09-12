@@ -1,5 +1,6 @@
 # semantic-release >> https://github.com/cenk1cenk2/drone-semantic-release
 #   gitlab-release >> http://plugins.drone.io/appleboy/drone-gitlab-ci/
+#
 
 kind: pipeline
 name: semver
