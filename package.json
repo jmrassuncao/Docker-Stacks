@@ -14,7 +14,7 @@
         }
       ],
       "@semantic-release/changelog",
-      "@semantic-release/gitlab"
+      "@semantic-release/git"
     ],
     "branch": "master"
   },
