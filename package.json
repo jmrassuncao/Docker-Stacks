@@ -18,6 +18,12 @@
     ],
     "branch": "master"
   },
+
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.jassuncao.work/jassuncao/docker-stacks.git"
+  },
+
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
