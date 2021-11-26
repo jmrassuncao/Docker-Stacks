@@ -2,16 +2,16 @@ version: "3"
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
     container_name: nginxproxymanager
-    network_mode: bridge
+
+    restart: unless-stopped
     ports:
       # These ports are in format <host-port>:<container-port>
       - '11180:80'
       - '11181:81'
       - '11443:443'
       # Add any other Stream port you want to expose
-      # - '11021:21' # FTP
+      # - '11121:21' # FTP
     environment:
       DB_MYSQL_HOST: "db"
       DB_MYSQL_PORT: 3306
@@ -29,9 +29,8 @@ services:
 
   db:
     image: 'jc21/mariadb-aria:latest'
-    restart: unless-stopped
     container_name: nginxproxymanager_mariadb
-    network_mode: bridge
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: 'npm'
       MYSQL_DATABASE: 'npm'
