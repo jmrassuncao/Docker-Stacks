@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: JA2508ca
+      MYSQL_DATABASE: test_db
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: 10.0.10.5
+      PMA_USER: root
+      PMA_PASSWORD: JA2508ca
+      UPLOAD_LIMIT: 1500M
+    ports:
+      - "8080:80"
